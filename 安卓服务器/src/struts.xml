@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+     <constant name="struts.i18n.encoding" value="gbk"/>
+     <constant name="struts.devMode" value="true" />
+     <!--Struts2中Action对象的创建交给spring完成-->
+     <constant name="struts.objectFactory" value="spring" />   
+       
+          
+	 <package name="login" namespace="/login" extends="struts-default">
+	        <action name="login_*" class="loginAction" method="{1}">
+	        	<result name="main_view">/main.jsp</result>
+	        	<result name="error">/error.jsp</result>
+	        	<result name="input">/login.jsp</result> 
+	        	<result name="login_view">/login.jsp</result>
+	          
+	        </action>  
+	 </package>
+	 
+         <!-- ClassInfoAction配置 -->
+         <package name="ClassInfo" namespace="/ClassInfo" extends="struts-default">
+           <action name="ClassInfo_*" class="classInfoAction" method="{1}">
+             <result name="add_view">/ClassInfo_add.jsp</result>
+             <result name="input">/ClassInfo_add.jsp</result>
+             <result name="add_success">/message.jsp</result>
+             <result name="delete_success">/message.jsp</result>
+             <result name="modify_success">/message.jsp</result>
+             <result name="error">/error.jsp</result>
+             <result name="query_view">/ClassInfo_query_result.jsp</result>
+             <result name="front_query_view">/ClassInfo_frontquery_result.jsp</result>
+             <result name="front_show_view">/ClassInfo_frontshow.jsp</result>
+             <result name="modify_view">/ClassInfo_modify.jsp</result>
+           </action>
+         </package>
+
+         <!-- UserInfoAction配置 -->
+         <package name="UserInfo" namespace="/UserInfo" extends="struts-default">
+           <action name="UserInfo_*" class="userInfoAction" method="{1}">
+             <result name="add_view">/UserInfo_add.jsp</result>
+             <result name="input">/UserInfo_add.jsp</result>
+             <result name="add_success">/message.jsp</result>
+             <result name="delete_success">/message.jsp</result>
+             <result name="modify_success">/message.jsp</result>
+             <result name="error">/error.jsp</result>
+             <result name="query_view">/UserInfo_query_result.jsp</result>
+             <result name="front_query_view">/UserInfo_frontquery_result.jsp</result>
+             <result name="front_show_view">/UserInfo_frontshow.jsp</result>
+             <result name="modify_view">/UserInfo_modify.jsp</result>
+           </action>
+         </package>
+
+         <!-- UserTypeAction配置 -->
+         <package name="UserType" namespace="/UserType" extends="struts-default">
+           <action name="UserType_*" class="userTypeAction" method="{1}">
+             <result name="add_view">/UserType_add.jsp</result>
+             <result name="input">/UserType_add.jsp</result>
+             <result name="add_success">/message.jsp</result>
+             <result name="delete_success">/message.jsp</result>
+             <result name="modify_success">/message.jsp</result>
+             <result name="error">/error.jsp</result>
+             <result name="query_view">/UserType_query_result.jsp</result>
+             <result name="front_query_view">/UserType_frontquery_result.jsp</result>
+             <result name="front_show_view">/UserType_frontshow.jsp</result>
+             <result name="modify_view">/UserType_modify.jsp</result>
+           </action>
+         </package>
+
+         <!-- RoomAction配置 -->
+         <package name="Room" namespace="/Room" extends="struts-default">
+           <action name="Room_*" class="roomAction" method="{1}">
+             <result name="add_view">/Room_add.jsp</result>
+             <result name="input">/Room_add.jsp</result>
+             <result name="add_success">/message.jsp</result>
+             <result name="delete_success">/message.jsp</result>
+             <result name="modify_success">/message.jsp</result>
+             <result name="error">/error.jsp</result>
+             <result name="query_view">/Room_query_result.jsp</result>
+             <result name="front_query_view">/Room_frontquery_result.jsp</result>
+             <result name="front_show_view">/Room_frontshow.jsp</result>
+             <result name="modify_view">/Room_modify.jsp</result>
+           </action>
+         </package>
+
+         <!-- SeatAction配置 -->
+         <package name="Seat" namespace="/Seat" extends="struts-default">
+           <action name="Seat_*" class="seatAction" method="{1}">
+             <result name="add_view">/Seat_add.jsp</result>
+             <result name="input">/Seat_add.jsp</result>
+             <result name="add_success">/message.jsp</result>
+             <result name="delete_success">/message.jsp</result>
+             <result name="modify_success">/message.jsp</result>
+             <result name="error">/error.jsp</result>
+             <result name="query_view">/Seat_query_result.jsp</result>
+             <result name="front_query_view">/Seat_frontquery_result.jsp</result>
+             <result name="front_show_view">/Seat_frontshow.jsp</result>
+             <result name="modify_view">/Seat_modify.jsp</result>
+           </action>
+         </package>
+
+         <!-- SeatStateAction配置 -->
+         <package name="SeatState" namespace="/SeatState" extends="struts-default">
+           <action name="SeatState_*" class="seatStateAction" method="{1}">
+             <result name="add_view">/SeatState_add.jsp</result>
+             <result name="input">/SeatState_add.jsp</result>
+             <result name="add_success">/message.jsp</result>
+             <result name="delete_success">/message.jsp</result>
+             <result name="modify_success">/message.jsp</result>
+             <result name="error">/error.jsp</result>
+             <result name="query_view">/SeatState_query_result.jsp</result>
+             <result name="front_query_view">/SeatState_frontquery_result.jsp</result>
+             <result name="front_show_view">/SeatState_frontshow.jsp</result>
+             <result name="modify_view">/SeatState_modify.jsp</result>
+           </action>
+         </package>
+
+         <!-- SeatOrderAction配置 -->
+         <package name="SeatOrder" namespace="/SeatOrder" extends="struts-default">
+           <action name="SeatOrder_*" class="seatOrderAction" method="{1}">
+             <result name="add_view">/SeatOrder_add.jsp</result>
+             <result name="input">/SeatOrder_add.jsp</result>
+             <result name="add_success">/message.jsp</result>
+             <result name="delete_success">/message.jsp</result>
+             <result name="modify_success">/message.jsp</result>
+             <result name="error">/error.jsp</result>
+             <result name="query_view">/SeatOrder_query_result.jsp</result>
+             <result name="front_query_view">/SeatOrder_frontquery_result.jsp</result>
+             <result name="front_show_view">/SeatOrder_frontshow.jsp</result>
+             <result name="modify_view">/SeatOrder_modify.jsp</result>
+           </action>
+         </package>
+
+         <!-- SelectSeatAction配置 -->
+         <package name="SelectSeat" namespace="/SelectSeat" extends="struts-default">
+           <action name="SelectSeat_*" class="selectSeatAction" method="{1}">
+             <result name="add_view">/SelectSeat_add.jsp</result>
+             <result name="input">/SelectSeat_add.jsp</result>
+             <result name="add_success">/message.jsp</result>
+             <result name="delete_success">/message.jsp</result>
+             <result name="modify_success">/message.jsp</result>
+             <result name="error">/error.jsp</result>
+             <result name="query_view">/SelectSeat_query_result.jsp</result>
+             <result name="front_query_view">/SelectSeat_frontquery_result.jsp</result>
+             <result name="front_show_view">/SelectSeat_frontshow.jsp</result>
+             <result name="modify_view">/SelectSeat_modify.jsp</result>
+           </action>
+         </package>
+
+         <!-- JubaoAction配置 -->
+         <package name="Jubao" namespace="/Jubao" extends="struts-default">
+           <action name="Jubao_*" class="jubaoAction" method="{1}">
+             <result name="add_view">/Jubao_add.jsp</result>
+             <result name="input">/Jubao_add.jsp</result>
+             <result name="add_success">/message.jsp</result>
+             <result name="delete_success">/message.jsp</result>
+             <result name="modify_success">/message.jsp</result>
+             <result name="error">/error.jsp</result>
+             <result name="query_view">/Jubao_query_result.jsp</result>
+             <result name="front_query_view">/Jubao_frontquery_result.jsp</result>
+             <result name="front_show_view">/Jubao_frontshow.jsp</result>
+             <result name="modify_view">/Jubao_modify.jsp</result>
+           </action>
+         </package>
+
+         <!-- JcAction配置 -->
+         <package name="Jc" namespace="/Jc" extends="struts-default">
+           <action name="Jc_*" class="jcAction" method="{1}">
+             <result name="add_view">/Jc_add.jsp</result>
+             <result name="input">/Jc_add.jsp</result>
+             <result name="add_success">/message.jsp</result>
+             <result name="delete_success">/message.jsp</result>
+             <result name="modify_success">/message.jsp</result>
+             <result name="error">/error.jsp</result>
+             <result name="query_view">/Jc_query_result.jsp</result>
+             <result name="front_query_view">/Jc_frontquery_result.jsp</result>
+             <result name="front_show_view">/Jc_frontshow.jsp</result>
+             <result name="modify_view">/Jc_modify.jsp</result>
+           </action>
+         </package>
+
+
+	 
+	 
+
+ 	 <package name="password" namespace="/password" extends="struts-default">
+	        <action name="ChangePassword" class="changePasswordAction">  
+	        	<result name="change_success">/message.jsp</result>
+	        	<result name="error">/error.jsp</result> 
+	        </action>  
+	 </package> 
+	  
+	 <package name="User" namespace="/User" extends="struts-default">
+	        <action name="User_*" class="com.chengxusheji.action.UserAction" method="{1}">  
+	        	<result name="user_query_view">/user_query_result.jsp</result>
+	        	<result name="success">/message.jsp</result>
+	        	<result name="error">/error.jsp</result> 
+	        </action>  
+	 </package>  
+	 
+</struts>

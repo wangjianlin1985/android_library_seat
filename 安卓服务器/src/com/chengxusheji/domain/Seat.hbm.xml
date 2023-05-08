@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.chengxusheji.domain">
+
+	<class name="Seat" table="Seat">
+
+          <!-- 主键座位id -->
+          <id name="seatId" column="seatId">
+            <generator class="native"/>
+          </id>
+
+          <!-- 多对一属性: 所在阅览室 -->
+          <many-to-one name="roomObj"
+            column="roomObj"
+            class="Room"
+            lazy="false"
+            outer-join="true"
+            cascade="save-update"
+          />
+
+          <!-- 简单字符串属性: 座位编号 -->
+          <property
+            name="seatCode"
+            column="seatCode"
+            type="string"
+            length="20"
+          />
+
+          <!-- 多对一属性: 当前状态 -->
+          <many-to-one name="seatStateObj"
+            column="seatStateObj"
+            class="SeatState"
+            lazy="false"
+            outer-join="true"
+            cascade="save-update"
+          />
+
+
+		 
+		
+	</class>
+	
+</hibernate-mapping>
+ 

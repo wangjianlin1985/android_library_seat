@@ -1,0 +1,62 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.chengxusheji.domain">
+
+	<class name="SelectSeat" table="SelectSeat">
+
+          <!-- 主键选座id -->
+          <id name="selectId" column="selectId">
+            <generator class="native"/>
+          </id>
+
+          <!-- 多对一属性: 座位编号 -->
+          <many-to-one name="seatObj"
+            column="seatObj"
+            class="Seat"
+            lazy="false"
+            outer-join="true"
+            cascade="save-update"
+          />
+
+          <!-- 多对一属性: 选座用户 -->
+          <many-to-one name="userObj"
+            column="userObj"
+            class="UserInfo"
+            lazy="false"
+            outer-join="true"
+            cascade="save-update"
+          />
+
+          <!-- 简单字符串属性: 选座开始时间 -->
+          <property
+            name="startTime"
+            column="startTime"
+            type="string"
+            length="20"
+          />
+
+          <!-- 简单字符串属性: 选座结束时间 -->
+          <property
+            name="endTime"
+            column="endTime"
+            type="string"
+            length="20"
+          />
+
+          <!-- 简单字符串属性: 选座状态 -->
+          <property
+            name="seatState"
+            column="seatState"
+            type="string"
+            length="20"
+          />
+
+
+		 
+		
+	</class>
+	
+</hibernate-mapping>
+ 

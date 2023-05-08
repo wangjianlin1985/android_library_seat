@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.mobileclient.activity"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="8"
+         android:targetSdkVersion="8"
+         /> 
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" 
+        android:name="com.mobileclient.app.Declare">
+        <activity
+            android:name=".LoginActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        
+        <activity android:name="MainActivity"></activity>
+        <activity android:name="MoreActivity"></activity>
+        <activity android:name="AboutActivity"></activity>
+        <activity android:name="RegisterActivity"></activity>
+        <activity android:name="MainMenuActivity"></activity>
+        <activity android:name="ClassInfoListActivity"></activity>
+        <activity android:name="ClassInfoQueryActivity"></activity>
+        <activity android:name="ClassInfoAddActivity"></activity>
+        <activity android:name="ClassInfoEditActivity"></activity>
+        <activity android:name="ClassInfoDetailActivity"></activity>
+        <activity android:name="UserInfoListActivity"></activity>
+        <activity android:name="UserInfoQueryActivity"></activity>
+        <activity android:name="UserInfoAddActivity"></activity>
+        <activity android:name="UserInfoEditActivity"></activity>
+        <activity android:name="UserInfoDetailActivity"></activity>
+        <activity android:name="UserTypeListActivity"></activity>
+        <activity android:name="UserTypeQueryActivity"></activity>
+        <activity android:name="UserTypeAddActivity"></activity>
+        <activity android:name="UserTypeEditActivity"></activity>
+        <activity android:name="UserTypeDetailActivity"></activity>
+        <activity android:name="RoomListActivity"></activity>
+        <activity android:name="RoomQueryActivity"></activity>
+        <activity android:name="RoomAddActivity"></activity>
+        <activity android:name="RoomEditActivity"></activity>
+        <activity android:name="RoomDetailActivity"></activity>
+        <activity android:name="SeatListActivity"></activity>
+        <activity android:name="SeatQueryActivity"></activity>
+        <activity android:name="SeatAddActivity"></activity>
+        <activity android:name="SeatEditActivity"></activity>
+        <activity android:name="SeatDetailActivity"></activity>
+        <activity android:name="SeatStateListActivity"></activity>
+        <activity android:name="SeatStateQueryActivity"></activity>
+        <activity android:name="SeatStateAddActivity"></activity>
+        <activity android:name="SeatStateEditActivity"></activity>
+        <activity android:name="SeatStateDetailActivity"></activity>
+        <activity android:name="SeatOrderListActivity"></activity>
+        <activity android:name="SeatOrderQueryActivity"></activity>
+        <activity android:name="SeatOrderAddActivity"></activity>
+        <activity android:name="SeatOrderEditActivity"></activity>
+        <activity android:name="SeatOrderDetailActivity"></activity>
+        <activity android:name="SelectSeatListActivity"></activity>
+        <activity android:name="SelectSeatQueryActivity"></activity>
+        <activity android:name="SelectSeatAddActivity"></activity>
+        <activity android:name="SelectSeatEditActivity"></activity>
+        <activity android:name="SelectSeatDetailActivity"></activity>
+        <activity android:name="JubaoListActivity"></activity>
+        <activity android:name="JubaoQueryActivity"></activity>
+        <activity android:name="JubaoAddActivity"></activity>
+        <activity android:name="JubaoEditActivity"></activity>
+        <activity android:name="JubaoDetailActivity"></activity>
+        <activity android:name="JcListActivity"></activity>
+        <activity android:name="JcQueryActivity"></activity>
+        <activity android:name="JcAddActivity"></activity>
+        <activity android:name="JcEditActivity"></activity>
+        <activity android:name="JcDetailActivity"></activity>
+
+        <activity android:name="photoListActivity"></activity>
+        <activity android:name="fileListActivity"></activity>
+    </application>
+
+    
+    <uses-permission android:name="android.permission.INTERNET" />
+
+	<!-- 文件读写权限 -->
+	
+	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"></uses-permission>
+    <uses-permission android:name="android.permission.WRITE_MEDIA_STORAGE"></uses-permission>
+	
+	
+</manifest>

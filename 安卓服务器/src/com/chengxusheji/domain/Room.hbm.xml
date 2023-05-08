@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.chengxusheji.domain">
+
+	<class name="Room" table="Room">
+
+          <!-- 主键阅览室id -->
+          <id name="roomId" column="roomId">
+            <generator class="native"/>
+          </id>
+
+          <!-- 简单字符串属性: 阅览室名称 -->
+          <property
+            name="roomName"
+            column="roomName"
+            type="string"
+            length="20"
+          />
+
+          <!-- 简单图片属性: 阅览室照片 -->
+          <property
+            name="roomPhoto"
+            column="roomPhoto"
+            type="string"
+            length="50"
+          />
+
+          <!-- 简单字符串属性: 阅览室位置 -->
+          <property
+            name="roomPlace"
+            column="roomPlace"
+            type="string"
+            length="50"
+          />
+
+          <!-- 简单整型属性: 总座位数 -->
+          <property
+            name="seatNum"
+            column="seatNum"
+            type="int"
+
+          />
+
+
+		 
+		
+	</class>
+	
+</hibernate-mapping>
+ 

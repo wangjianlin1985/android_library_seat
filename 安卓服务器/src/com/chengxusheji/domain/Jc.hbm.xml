@@ -1,0 +1,68 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.chengxusheji.domain">
+
+	<class name="Jc" table="Jc">
+
+          <!-- 主键奖惩id -->
+          <id name="jcId" column="jcId">
+            <generator class="native"/>
+          </id>
+
+          <!-- 简单字符串属性: 奖惩类型 -->
+          <property
+            name="jcType"
+            column="jcType"
+            type="string"
+            length="20"
+          />
+
+          <!-- 简单字符串属性: 奖惩标题 -->
+          <property
+            name="title"
+            column="title"
+            type="string"
+            length="60"
+          />
+
+          <!-- 简单字符串属性: 奖惩内容 -->
+          <property
+            name="content"
+            column="content"
+            type="string"
+            length="800"
+          />
+
+          <!-- 多对一属性: 奖惩用户 -->
+          <many-to-one name="userObj"
+            column="userObj"
+            class="UserInfo"
+            lazy="false"
+            outer-join="true"
+            cascade="save-update"
+          />
+
+          <!-- 简单浮点型属性: 信用分数 -->
+          <property
+            name="creditScore"
+            column="creditScore"
+            type="float"
+          />
+
+          <!-- 简单字符串属性: 奖惩时间 -->
+          <property
+            name="jcTime"
+            column="jcTime"
+            type="string"
+            length="20"
+          />
+
+
+		 
+		
+	</class>
+	
+</hibernate-mapping>
+ 

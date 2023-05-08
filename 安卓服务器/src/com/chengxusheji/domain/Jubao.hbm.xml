@@ -1,0 +1,61 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.chengxusheji.domain">
+
+	<class name="Jubao" table="Jubao">
+
+          <!-- 主键举报id -->
+          <id name="jubaoId" column="jubaoId">
+            <generator class="native"/>
+          </id>
+
+          <!-- 简单字符串属性: 举报标题 -->
+          <property
+            name="title"
+            column="title"
+            type="string"
+            length="60"
+          />
+
+          <!-- 简单字符串属性: 举报内容 -->
+          <property
+            name="content"
+            column="content"
+            type="string"
+            length="800"
+          />
+
+          <!-- 多对一属性: 举报用户 -->
+          <many-to-one name="userObj"
+            column="userObj"
+            class="UserInfo"
+            lazy="false"
+            outer-join="true"
+            cascade="save-update"
+          />
+
+          <!-- 简单字符串属性: 举报时间 -->
+          <property
+            name="jubaoTime"
+            column="jubaoTime"
+            type="string"
+            length="20"
+          />
+
+          <!-- 简单字符串属性: 管理回复 -->
+          <property
+            name="replyContent"
+            column="replyContent"
+            type="string"
+            length="500"
+          />
+
+
+		 
+		
+	</class>
+	
+</hibernate-mapping>
+ 
